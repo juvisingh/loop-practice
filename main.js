@@ -27,4 +27,13 @@ for (i = 1; i < 11; i+= 2) {
 }
 console.log(oddNatSum)
 
+//product of every number that is divisible by 6 from 1 to 400
+var divSixNum = 0;
+for (i = 0; i < 401; i++) {
+    if(i % 6 == 0) {
+        divSixNum *= i;
+    }
+}
+console.log(divSixNum)
+
 
