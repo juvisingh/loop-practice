@@ -38,23 +38,23 @@ console.log(divSixNum)
 
 //determine if an input is prime or not
 var userNumber = Number(prompt('Enter a number to check if it is prime or not: '));
-var isPrime = true;
+var primeOrNot = true;
 if (userNumber > 0) {
     if (userNumber == 1) {
-        isPrime = false;
+        primeOrNot = false;
     }
     else {
         for (i = 2; i < userNumber; i ++) {
             if (userNumber % i == 0) {
-                isPrime = false;
+                primeOrNot = false;
         }
     }
 }
 }
 else {
-    isPrime = false;
+    primeOrNot = false;
 }
-if (isPrime == false) {
+if (primeOrNot == false) {
     console.log(userNumber + " is not prime.")
 }
 else {
@@ -62,14 +62,16 @@ else {
 }
 
 //every prime number from 1 to 100- THIS ONE
-const primeNumbers = []
-var begNum = 2;
-var isPrime = true;
-for (begNum = 2; begNum <=100; begNum++){
-    for (i = 2; i < begNum; i ++) {
-        if (begNum % i != 0) {
-            primeNumbers.push(begNum)
+var primeNumbers = []
+for (var begNum = 2; begNum <=100; begNum++){
+    var prime = true;
+    for (var i = 2; i < begNum; i ++) {
+        if (begNum % i == 0) {
+            prime = false;
         }
+    }
+    if (prime == true) {
+        primeNumbers.push(begNum)
     }
 }
 console.log(primeNumbers)
