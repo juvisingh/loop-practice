@@ -1,35 +1,35 @@
-var i = 0;
+
 //sum of every number from 1 to 1000
 var everySum = 0;
-for (i = 0; i < 1001; i ++) {
+for (var i = 0; i < 1001; i ++) {
     everySum += i;
 }
 console.log(everySum);
 
 //sum of the first 10 natural numbers
 var naturalSum = 0;
-for (i = 0; i < 11; i ++) {
+for (var i = 0; i < 11; i ++) {
     naturalSum += i;
 }
 console.log(naturalSum);
 
 //sum of every odd number from 93 to 845
 var oddNumSum = 0;
-for (i = 93; i <= 845; i += 2) {
+for (var i = 93; i <= 845; i += 2) {
     oddNumSum += i
 }
 console.log(oddNumSum);
 
 //sum of odd numbers from the first 10 natural numbers
 var oddNatSum = 0
-for (i = 1; i < 11; i+= 2) {
+for (var i = 1; i < 11; i+= 2) {
     oddNatSum += i
 }
 console.log(oddNatSum)
 
 //product of every number that is divisible by 6 from 1 to 400
 var divSixNum = 1;
-for (i = 1; i <= 400; i++) {
+for (var i = 1; i <= 400; i++) {
     if(i % 6 == 0) {
         divSixNum *= i;
     }
@@ -44,7 +44,7 @@ if (userNumber > 0) {
         primeOrNot = false;
     }
     else {
-        for (i = 2; i < userNumber; i ++) {
+        for (var i = 2; i < userNumber; i ++) {
             if (userNumber % i == 0) {
                 primeOrNot = false;
         }
@@ -99,7 +99,7 @@ var gcf;
 if (gcfOne > gcfTwo) {
     largestNum = gcfOne;
 }
-for (i = 2; i < largestNum; i++) {
+for (var i = 2; i < largestNum; i++) {
     if ((gcfOne % i == 0) && (gcfTwo % i == 0)) [
         gcf = i
     ]
@@ -109,17 +109,17 @@ console.log('The GCF is ' + gcf + '.')
 //create a diamond of size (input)
 var sizeOfDiamond = Number(prompt('Enter in the size of the diamond: '));
 var diamond = '*'
-for (i = 1; i <= sizeOfDiamond; i ++) {
+for (var i = 1; i <= sizeOfDiamond; i ++) {
     console.log(diamond.repeat(i));
 }
  
 //create a triangle of size (input)
 var sizeOfTriangle = Number(prompt('Enter in the size of the triangle: '));
 var triangle = '*'
-for (i = 1; i <= sizeOfTriangle; i ++) {
+for (var i = 1; i <= sizeOfTriangle; i ++) {
     console.log(triangle.repeat(i));
 }
-for (i = sizeOfTriangle - 1; i > 0; i --) {
+for (var i = sizeOfTriangle - 1; i > 0; i --) {
     console.log(triangle.repeat(i));
 }
 
