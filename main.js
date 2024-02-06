@@ -155,22 +155,27 @@ console.log(fibArray);
 
 //square made of the [input]
 var sqaureNum = Number(prompt('Enter the number you would like to make squares out of: '));
-const squareArray = []
+var listOfNumbers = " "
+var done = false;
+var needFirst = true;
+for (var i = sqaureNum; i > 0; i--) {
+    listOfNumbers += i
+}
 for (var i = 0; i < sqaureNum + 1; i++) {
-    squareArray.push(i)
+    listOfNumbers += i
 }
-function shiftArray(){
-   var firstElemnt = squareArray[0]
-    for (var i = 0; i < squareArray.length - 1; i++) {
-    squareArray[i] = squareArray[i + 1]
+var indexOfZero = listOfNumbers.indexOf("0");
+while (done == false) {
+    if (needFirst = true) {
+        var value = listOfNumbers.substring(indexOfZero)
+        console.log(value)
     }
-    squareArray.push(firstElemnt)
-    var changedArray = new Set(squareArray)
-    changedArray = Array.from(changedArray)
-    console.log(changedArray)
+    for (var i = 0; i < sqaureNum; i++){
+        var printing = listOfNumbers.substring(indexOfZero- (i + 1), listOfNumbers.length - (i + 1))
+        console.log(printing)
+        if (i + 1 == sqaureNum) {
+            done = true;
+        }
+    }
+    needFirst = false;
 }
-console.log(squareArray)
-for (var i = 0; i < sqaureNum; i++){
-    shiftArray()
-}
-
